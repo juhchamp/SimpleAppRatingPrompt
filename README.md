@@ -66,8 +66,8 @@ SimpleAppRatingPrompt(this)
     .setMessage(getString(R.string.app_rate_modal_message))
     .setPositiveButton(getString(R.string.app_rate_modal_like_label), this)
     .setNegativeButton(getString(R.string.app_rate_modal_don_t_like_label), this)
-    .setRemindMeLaterButton(getString(R.string.app_rate_modal_remind_me_later_label), this) // optional
-    .useDontShowAgainCheckbox(getString(R.string.app_rate_modal_don_t_show_again)) // optional
+    //.setRemindMeLaterButton(getString(R.string.app_rate_modal_remind_me_later_label), this) // optional
+    //.useDontShowAgainCheckbox(getString(R.string.app_rate_modal_don_t_show_again)) // optional
     //.setOnlyOneTime(true) // optional, default is false
     .launch()
 ```
