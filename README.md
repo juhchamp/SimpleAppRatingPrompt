@@ -62,10 +62,10 @@ Call the SimpleAppRatingPrompt instance passing activity and set the other neede
 SimpleAppRatingPrompt(this)
     .setMinLaunchCountToPrompt(3)
     .setTimeToNextPrompt(3) // In days
-    .setTitle(getString(R.string.app_rate_modal_title))
-    .setMessage(getString(R.string.app_rate_modal_message))
-    .setPositiveButton(getString(R.string.app_rate_modal_like_label), this)
-    .setNegativeButton(getString(R.string.app_rate_modal_don_t_like_label), this)
+    .setTitle("Rate us")
+    .setMessage("Did you enjoy the app? Can you rate us on Google Play?")
+    .setPositiveButton("Yes", this)
+    .setNegativeButton("No", this)
     //.setRemindMeLaterButton(getString(R.string.app_rate_modal_remind_me_later_label), this) // optional
     //.useDontShowAgainCheckbox(getString(R.string.app_rate_modal_don_t_show_again)) // optional
     //.setOnlyOneTime(true) // optional, default is false
