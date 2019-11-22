@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Simple App Rating Prompt Lib</string>
+    <string name="app_rating_default_positive_button_label">Rate us</string>
+    <string name="app_rating_default_negative_button_label">Not now</string>
+    <string name="app_rating_default_remind_me_later_button_label">Remind me later</string>
+    <string name="app_rating_default_don_t_show_again_label">Don\'t show again</string>
+    <string name="app_rating_default_prompt_title">Simple app rating prompt</string>
+    <string name="app_rating_default_prompt_message">Simple app rating message…</string>
+</resources>

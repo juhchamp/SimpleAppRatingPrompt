@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Simple App Rating Prompt</string>
+    <string name="app_rate_modal_title">O que achou da sua carteira?</string>
+    <string name="app_rate_modal_message">Nos avalie na Google Play e inspire cada vez mais a melhorar a sua experiência na carteira.</string>
+    <string name="app_rate_modal_don_t_show_again">Não mostrar novamente</string>
+    <string name="app_rate_modal_remind_me_later_label">Lembre-me depois</string>
+    <string name="app_rate_modal_don_t_like_label">Não gostei</string>
+    <string name="app_rate_modal_like_label">Gostei</string>
+</resources>

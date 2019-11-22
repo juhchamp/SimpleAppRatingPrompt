@@ -1,0 +1,2 @@
+include ':app', ':simpleappratingpromptlib'
+rootProject.name='Simple App Rating Prompt'
