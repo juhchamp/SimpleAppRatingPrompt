@@ -172,6 +172,32 @@ class SimpleAppRatingPrompt(private var activity: AppCompatActivity) {
         editor.apply()
     }
 
+    /**
+     * Increment the launch count in call.
+     */
+    fun incrementLaunchCount(): SimpleAppRatingPrompt {
+        val editor = prefs.edit()
+        savedLaunchCount = prefs.getInt(LAUNCH_COUNT_KEY, 0) + 1
+        editor.putInt(LAUNCH_COUNT_KEY, savedLaunchCount)
+        editor.apply()
+        return this
+    }
+
+    /**
+     * Show prompt.
+     */
+    fun showPrompt() {
+        showDialog()
+    }
+
+    /**
+     * Get the launch count.
+     * @return [Int] value of the current launch count
+     */
+    fun getLaunchCount(): Int {
+        return prefs.getInt(LAUNCH_COUNT_KEY, 0)
+    }
+
     private fun showDialog() {
 
         if(positiveButtonListener == null) {

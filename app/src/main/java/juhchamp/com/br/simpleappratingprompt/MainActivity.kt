@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import juhchamp.com.br.simpleappratingpromptlib.RatingPromptClickListener
 import juhchamp.com.br.simpleappratingpromptlib.SimpleAppRatingPrompt
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity(), RatingPromptClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        SimpleAppRatingPrompt(this)
+        /*SimpleAppRatingPrompt(this)
             .setMinLaunchCountToPrompt(3)
             .setTimeToNextPrompt(0) // In days
             .setTitle(getString(R.string.app_rate_modal_title))
@@ -25,7 +26,20 @@ class MainActivity : AppCompatActivity(), RatingPromptClickListener {
             //.setRemindMeLaterButton(getString(R.string.app_rate_modal_remind_me_later_label), this) // optional
             //.useDontShowAgainCheckbox(getString(R.string.app_rate_modal_don_t_show_again)) // optional
             //.setOnlyOneTime(true) // optional, default is false
-            .launch()
+            .launch()*/
+
+        val simpleAppRatingPrompt: SimpleAppRatingPrompt = SimpleAppRatingPrompt(this)
+            .setTitle(getString(R.string.app_rate_modal_title))
+            .setMessage(getString(R.string.app_rate_modal_message))
+            .setPositiveButton(getString(R.string.app_rate_modal_like_label), this)
+            .setNegativeButton(getString(R.string.app_rate_modal_don_t_like_label), this)
+            .incrementLaunchCount()
+
+        val launchCount = simpleAppRatingPrompt.getLaunchCount()
+        val possibilities = setOf(5, 10, 15)
+        if(launchCount in possibilities || launchCount % 20 == 0) {
+            simpleAppRatingPrompt.showPrompt()
+        }
     }
 
     override fun onRatingPromptButtonClick(whichButton: Int) {

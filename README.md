@@ -72,3 +72,19 @@ SimpleAppRatingPrompt(this)
     .launch()
 ```
 
+**Step 3 ( another way to use ).**
+```kotlin
+ val simpleAppRatingPrompt: SimpleAppRatingPrompt = SimpleAppRatingPrompt(this)
+    .setTitle("Rate us")
+    .setMessage("Did you enjoy the app? Can you rate us on Google Play?")
+    .setPositiveButton("Yes", this)
+    .setNegativeButton("No", this)
+    .incrementLaunchCount()
+
+val launchCount = simpleAppRatingPrompt.getLaunchCount()
+val possibilities = setOf(5, 10, 15)
+if(launchCount in possibilities || launchCount % 20 == 0) {
+    simpleAppRatingPrompt.showPrompt()
+}
+```
+
